@@ -41,8 +41,8 @@ def main():
             for shot in shots:
                 if asteroid.collides_with(shot):
                     log_event("asteroid_shot")
+                    asteroid.split()
                     shot.kill()
-                    asteroid.kill()
         for obj in drawable:
             obj.draw(screen)
         pygame.display.flip()
